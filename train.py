@@ -25,7 +25,7 @@ class CNNAE(Chain):
 
         h = F.relu(self.conv1(x))
         h = F.relu(self.conv2(h))
-        h = F.relu(self.conv3(h))
+        h = F.sigmoid(self.conv3(h))
         return h
         
     def __call__(self, x, t):
